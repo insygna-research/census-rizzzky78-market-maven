@@ -75,17 +75,15 @@ export const Chat: FC<ChatProps> = ({ id, query, chats }) => {
             </div>
           </div>
         </header>
-        <div className="flex flex-col px-4 overflow-hidden">
+        <div className="flex flex-col px-4">
           <div
-            className="px-2 sm:px-12 pt-12 md:pt-14 pb-14 md:pb-24 max-w-[484px] md:max-w-3xl w-full mx-auto flex flex-col space-y-3 md:space-y-4 justify-center"
+            className="h-full px-2 sm:px-12 pt-12 md:pt-14 pb-14 md:pb-24 max-w-[484px] md:max-w-3xl w-full mx-auto flex flex-col space-y-3 md:space-y-4 justify-center"
             data-testid="chat-messages"
           >
             <ChatMessages ui={uiMessage} />
           </div>
-          <div className="w-full flex justify-center bottom-0 z-[30] overflow-hidden">
-            <div className="w-full">
-              <ChatPanel uiState={uiMessage} />
-            </div>
+          <div className="w-full flex justify-center sticky bottom-0 right-0 left-0 z-[30] bg-red-400">
+            <ChatPanel uiState={uiMessage} />
           </div>
         </div>
       </SidebarInset>
